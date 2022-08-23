@@ -1,0 +1,80 @@
+<%- include("include/header"); %>
+<main id="main" class="detail">
+  <div class="hr">
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+  </div>
+  <div class="bg">
+    <h2 class="title "><%= title %></h2>
+    <div id="contents">
+      <div class="movie_desc">
+        <ul>
+          <div class="desc_left">
+            <li>
+              <span>제목</span>
+              <p class="desc_title"><%= result.movieTitle %></p>
+            </li>
+            <li>
+              <span>개봉일</span>
+              <p class="desc_date"><%= result.date %></p>
+            </li>
+            <li>
+              <span>장르</span>
+              <p class="desc_genre"><%= result.genre %></p>
+            </li>
+            <li>
+              <span>평점</span>
+              <p class="desc_point"><%= result.point %></p>
+            </li>
+          </div>
+          <div class="desc_right">
+            <img class="desc_poster" src="<%= result.poster %>" alt="<%= result.title %>" />
+            <li><span class="blind">포스터:</span><img class="desc_poster" src="<%= result.poster %>" alt="<%= result.title %>" /></li>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="hr hr02">
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+    <hr></hr>
+  </div>
+</main>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+
+<script></script>
+<%- include("include/footer"); %>

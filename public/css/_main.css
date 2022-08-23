@@ -1,0 +1,388 @@
+/* *common*  */
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.section .titleBox {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.section .titleBox h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: rgb(41, 41, 41);
+  font-weight: 500px;
+}
+
+.section .titleBox p {
+  line-height: 1.5;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#mainVisual {
+  overflow: hidden;
+}
+
+#mainVisual li {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* contain (종횡비 유지 & 짤리지 않고 가득채우기) cover (짤라서 공간 전부 활용) */
+
+#mainVisual .visual01 {
+  background-image: url(../images/main/mainVisual01.jpg);
+}
+#mainVisual .visual02 {
+  background-image: url(../images/main/mainVisual02.jpg);
+}
+#mainVisual .visual03 {
+  background-image: url(../images/main/mainVisual03.jpg);
+}
+
+/* 스와이퍼하는 법 1. css와 js 파일생성 후 복붙 2.인덱스에css링크 추가 3. class지정 4.  <script>
+    new Swiper("#mainVisual"); */
+
+#mainVisual .slogan {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+#mainVisual .slogan h2 {
+  font-size: 62px;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#mainVisual .slogan p {
+  font-size: 20px;
+  line-height: 2;
+}
+#mainVisual button {
+  background: none;
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  border: 1px solid #fff;
+  padding: 0;
+  width: 80px;
+  height: 80px;
+}
+
+#mainVisual .prev {
+  left: 50px;
+}
+#mainVisual .next {
+  right: 50px;
+}
+
+#mainVisual button .material-icons {
+  font-size: 64px;
+  color: #fff;
+  vertical-align: top;
+  /* inline-block요소들이 원래 가지고 있는 하단여백을 없애는 기능 */
+}
+
+#mainVisual .iconScroll {
+  position: absolute;
+  bottom: 50px;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+#mainVisual .iconScroll .icon {
+  border: 2px solid #fff;
+  width: 20px;
+  height: 33px;
+  display: block;
+  border-radius: 100px;
+  margin: 0 auto 10px auto;
+}
+
+#mainVisual .iconScroll .icon:before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 7px;
+  background-color: #fff;
+  margin: 7px auto auto 9px;
+  animation-name: mouseAnimation;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  /* animation: mouseAnimation 1s ease-in-out 0 infinite ; */
+}
+
+#quickMenu {
+  padding: 0;
+}
+
+#quickMenu .container ul {
+  display: flex;
+}
+
+#quickMenu .container ul li {
+  position: relative;
+  overflow: hidden;
+}
+#quickMenu .container ul li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  border: 1px solid rgb(255, 255, 255);
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#quickMenu .container ul li:hover:before {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#quickMenu .container ul li img {
+  transition: transform 0.3s ease-in-out;
+  vertical-align: top;
+}
+#quickMenu .container ul li:hover img {
+  transform: scale(1.2);
+}
+
+#quickMenu .container ul li .txtBox {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  color: #fff;
+}
+
+#quickMenu .container ul li .txtBox p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  /* 상하margin겹치면 큰것만 적용 */
+}
+
+#quickMenu .container ul li .txtBox h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+}
+
+/* quickMenu end */
+
+#business {
+  background-color: #ccc;
+  background-image: url(../images/main/bgBusiness.jpg);
+  margin-top: 100px;
+}
+
+#business .container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  /* align-content 는 wrap 속성이 적용되어서 두줄 이상일때 정렬 */
+  height: 720px;
+}
+
+#business .container ul li {
+  position: relative;
+  overflow: hidden;
+}
+#business .container ul li .txtBox {
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+  color: #fff;
+}
+#business .container ul li {
+  vertical-align: top;
+  overflow: hidden;
+}
+
+#business .container ul li .txtBox h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+#business .container ul li {
+  position: relative;
+  overflow: hidden;
+}
+
+#business .container ul li img {
+  transition: transform 0.5s ease-in-out;
+  vertical-align: top;
+}
+#business .container ul li:hover img {
+  transform: scale(1.1);
+}
+
+#business .container ul li:before {
+  content: "";
+  display: block;
+  position: absolute;
+  border: 1px solid rgb(248, 248, 248);
+  left: 20px;
+  right: 20px;
+  top: 20px;
+  bottom: 20px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  border-radius: 30px;
+}
+
+#business .container ul li:hover:before {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* business end */
+
+#news .list {
+  display: flex;
+  justify-content: space-between;
+}
+
+#news .list li {
+  width: 31.33%;
+  /* box-sizing: border-box; */
+  /* width에 border삽입 */
+  box-shadow: inset 0 0 0 0 red;
+  border: 1px solid #999;
+  position: relative;
+
+  /* flex-grow: ; 남아있는 여백어떻게 처리할건지
+  flex-shrink: ;  */
+  transition: all 0.25s ease-in-out;
+}
+
+#news .list li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+#news .list li:after {
+  content: "";
+  display: block;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  box-shadow: inset 0 0 0 0 rgb(255, 255, 255);
+  /* 0=x 0=y 0=블러정도 10px=퍼짐정도 */
+  transition: box-shadow 0.15s ease-in-out;
+  pointer-events: none;
+}
+
+#news .list li:hover:after {
+  box-shadow: inset 0 0 0 3px #bf0c14;
+}
+
+#news .list li img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+#news .list li .desc {
+  padding: 30px;
+}
+#news .list li .desc h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+
+  white-space: nowrap;
+  /* white-space:nowrap 무조건 한줄로 되게함 */
+  text-overflow: ellipsis;
+  /* ellipsis는 글자 overflow인거 ...만들어줌 */
+  overflow: hidden;
+}
+#news .list li .desc h3 {
+  font-size: 24px;
+}
+
+#news .list li .desc .txt {
+  line-height: 1.5;
+  height: 4.5em; /* em=글자크기 */
+  overflow: hidden;
+  -webkit-line-clamp: 3; /* 몇줄부터 hidden처리할건지 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical; /* -webkit -box 붙여서 vertical  */
+  margin-bottom: 30px;
+}
+
+#news .list li .desc .date {
+  color: #999;
+}
+
+/* news end */
+
+#customer {
+  background-image: url(../images/main/bgCustomer.jpg);
+  color: #fff;
+}
+
+#customer h2 {
+  color: #fff;
+}
+
+#customer .titleBox h2:after {
+  content: "";
+  display: block;
+  width: 27px;
+  height: 1px;
+  background-color: #fff;
+  margin: 30px auto; /* block 가운데 처리할때 마진처리 0 auto   */
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.btns .btn {
+  height: 60px;
+  background-color: #bf0c14;
+  color: #fff;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin: 0 5px;
+}
+
+#customer .titleBox {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+@keyframes mouseAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

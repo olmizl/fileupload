@@ -1,0 +1,25 @@
+<%- include("include/header"); %>
+<main id="main">
+  <div id="contents">
+    <h2 class="title"><%= title %></h2>
+    <form action="/login" method="POST" class="formBox">
+      <div class="inputBox">
+        <label>
+          <span class="label">ID</span>
+          <input type="text" id="userID" name="userID" placeholder="ID를 입력하세요" />
+        </label>
+      </div>
+      <div class="inputBox">
+        <label>
+          <span class="label">Password</span>
+          <input type="password" id="userPW" name="userPW" placeholder="password를 입력하세요" />
+        </label>
+      </div>
+      <div class="btns">
+        <button type="submit">로그인</button>
+        <button type="reset">취소</button>
+      </div>
+    </form>
+  </div>
+</main>
+<%- include("include/footer"); %>

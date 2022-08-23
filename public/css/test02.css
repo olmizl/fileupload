@@ -1,0 +1,38 @@
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.btns .btn {
+  height: 80px;
+  padding: 0 50px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(255, 130, 0);
+  color: #fff;
+  overflow: hidden;
+  text-shadow: 1px 1px 0px #e67500,2px 2px 0px #e67500,3px 3px 0px #e67500,4px 4px 0px #e67500,5px 5px 0px #e67500,6px 6px 0px #e67500,7px 7px 0px #e67500,8px 8px 0px #e67500,9px 9px 0px #e67500,10px 10px 0px #e67500,11px 11px 0px #e67500,12px 12px 0px #e67500,13px 13px 0px #e67500,14px 14px 0px #e67500,15px 15px 0px #e67500,16px 16px 0px #e67500,17px 17px 0px #e67500,18px 18px 0px #e67500,19px 19px 0px #e67500,20px 20px 0px #e67500,21px 21px 0px #e67500,22px 22px 0px #e67500,23px 23px 0px #e67500,24px 24px 0px #e67500,25px 25px 0px #e67500,26px 26px 0px #e67500,27px 27px 0px #e67500,28px 28px 0px #e67500,29px 29px 0px #e67500,30px 30px 0px #e67500,31px 31px 0px #e67500,32px 32px 0px #e67500,33px 33px 0px #e67500,34px 34px 0px #e67500,35px 35px 0px #e67500,36px 36px 0px #e67500,37px 37px 0px #e67500,38px 38px 0px #e67500,39px 39px 0px #e67500,40px 40px 0px #e67500,41px 41px 0px #e67500,42px 42px 0px #e67500,43px 43px 0px #e67500,44px 44px 0px #e67500,45px 45px 0px #e67500,46px 46px 0px #e67500,47px 47px 0px #e67500,48px 48px 0px #e67500,50px 50px 0px #e67500;
+  box-shadow: 0 10px 0 #cc6800;
+  transition: all 0.8s ease-in-out;
+}
+.btns .btn:active {
+  box-shadow: 0 0 0 #cc6800;
+  transform: translateY(10px);
+}
+
+.box {
+  margin-top: 100px;
+  width: 200px;
+  border: 1px solid #999;
+  width: 500px;
+}
+.box .inner {
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

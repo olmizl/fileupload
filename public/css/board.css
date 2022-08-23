@@ -1,0 +1,133 @@
+.contentsTable {
+  width: 100%;
+  border-top: 2px solid #bf0c14;
+}
+.contentsTable tbody th,
+.contentsTable tbody td,
+.contentsTable thead th,
+.contentsTable thead td {
+  padding: 15px 10px;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+.contentsTable tbody th:nth-child(1),
+.contentsTable tbody td:nth-child(1),
+.contentsTable thead th:nth-child(1),
+.contentsTable thead td:nth-child(1) {
+  border-left: none;
+}
+
+.boardTable {
+  width: 100%;
+  border-top: 2px solid #bf0c14;
+}
+.boardTable tbody th,
+.boardTable tbody td,
+.boardTable thead th,
+.boardTable thead td {
+  padding: 15px 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.boardTable .subject {
+  text-align: left;
+}
+.boardTable tbody tr:nth-child(2n+1) {
+  background-color: #eee;
+}
+.boardTable thead {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+.pagination ul {
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
+}
+.pagination a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin: 0 2px;
+}
+.pagination a.first {
+  background-color: #999;
+}
+.pagination a.first:before {
+  color: #fff;
+  display: inline-block;
+  margin-left: 0;
+  content: "keyboard_double_arrow_left";
+  font-family: "Material Icons";
+}
+.pagination a.prev {
+  background-color: #999;
+}
+.pagination a.prev:before {
+  color: #fff;
+  display: inline-block;
+  margin-left: 0;
+  content: "chevron_left";
+  font-family: "Material Icons";
+}
+.pagination a.last {
+  background-color: #999;
+}
+.pagination a.last:before {
+  color: #fff;
+  display: inline-block;
+  margin-left: 0;
+  content: "keyboard_double_arrow_right";
+  font-family: "Material Icons";
+}
+.pagination a.next {
+  background-color: #999;
+}
+.pagination a.next:before {
+  color: #fff;
+  display: inline-block;
+  margin-left: 0;
+  content: "chevron_right";
+  font-family: "Material Icons";
+}
+.pagination a.active {
+  color: #fff;
+  background-color: #bf0c14;
+}
+
+.searchForm {
+  background-color: #ccc;
+  justify-content: center;
+  display: flex;
+  padding: 80px 150px;
+}
+.searchForm #searchTxt {
+  height: 50px;
+  padding: 0 10px;
+  border: 1px solid #999;
+  box-sizing: border-box;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+.searchForm #searchCategory {
+  height: 50px;
+  padding: 0 10px;
+  border: 1px solid #999;
+  width: 120px;
+  margin-right: 5px;
+}
+.searchForm button {
+  width: 80px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 5px;
+}
