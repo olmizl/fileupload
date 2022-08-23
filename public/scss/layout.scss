@@ -13,6 +13,7 @@ body {
 }
 * {
   box-sizing: border-box;
+  word-break: keep-all;
 }
 #header {
   height: 60px;
@@ -253,7 +254,8 @@ body {
     display: flex;
     justify-content: center;
     .desc_left {
-      flex-basis: 47%;
+      flex-basis: 30%;
+      margin-left: 8%;
       li {
         margin-bottom: 2%;
         span {
@@ -263,11 +265,23 @@ body {
         p {
           font-size: 26px;
           font-weight: 500;
+          position: relative;
+          z-index: 2;
+          &:after {
+            content: "";
+            background-color: rgba(143, 124, 124, 0.2);
+            position: absolute;
+            bottom: 5%;
+            left: 2%;
+            width: 30%;
+            transform: skew(20deg);
+            height: 10px;
+          }
         }
       }
       .desc_point {
         position: relative;
-        &:after {
+        &::before {
           content: " (5점 만점 기준) ";
           position: absolute;
           color: #aaa;
@@ -282,12 +296,24 @@ body {
         font-weight: 700;
       }
     }
+    .desc_middle {
+      flex-basis: 30%;
+      span {
+        line-height: 3;
+        color: #999;
+      }
+      .desc_desc {
+        line-height: 1.6;
+        font-weight: 700;
+      }
+    }
     .desc_right {
       position: relative;
+      margin: 0 7%;
       > img {
         width: 350px;
         height: 430px;
-        filter: blur(3px);
+        filter: blur(5px);
         opacity: 0.3;
       }
       li {
@@ -295,7 +321,8 @@ body {
         top: 10%;
         left: 15%;
         img {
-          width: 250px;
+          width: 300px;
+          transform: translate(-30%, -21%);
         }
         p {
           letter-spacing: 1.6px;
@@ -312,6 +339,57 @@ body {
   background-color: #000;
 }
 
+.table02 {
+  .tb02_contents {
+    justify-content: space-between;
+    display: flex;
+    width: 1167px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    li {
+      margin-right: 5%;
+      margin-bottom: 6%;
+      position: relative;
+      &:hover {
+        .tb02_bg {
+          display: block;
+        }
+      }
+      .tb02_img {
+        img {
+          width: 220px;
+        }
+      }
+      .tb02_bg {
+        transition: all 0.25s ease-in-out;
+        display: none;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 99%;
+        text-align: center;
+      }
+      .tb02_title {
+        color: #fff;
+        font-size: 33px;
+        font-weight: 700;
+        margin-top: 35%;
+      }
+      .tb02_num {
+        font-size: 24px;
+        font-weight: 400;
+        color: #fff;
+        transform: translate(-38%, 50%);
+      }
+      .tb02_date {
+        font-size: 15px;
+        color: #ccc;
+        margin-top: 6%;
+      }
+    }
+  }
+}
 @media all and (max-width: 1200px) {
   #contents {
     width: 100%;

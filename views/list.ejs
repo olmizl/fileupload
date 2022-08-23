@@ -7,7 +7,7 @@
 
     <h2 class="title"><%= title %></h2>
     <!-- 서버로 파일 전송할때 form태그안에 enctype="multipart/form-data" 필수 -->
-    <div class="table">
+    <!-- <div class="table">
       <div class="head">
         <span style="width: 10%">NO</span>
         <span>Subject</span>
@@ -19,6 +19,25 @@
           <div class="column"><%= (idx+1) %></div>
           <div class="column subject"><a href="/movie/<%= item.movieTitle %>"><%= item.movieTitle %></a></div>
           <div class="column"><%= item.date %></div>
+        </li>
+        <% }) %>
+        <li></li>
+      </ul>
+    </div> -->
+
+    <div class="table02">
+      <ul class="tb02_contents">
+        <% list.forEach((item, idx)=> { %>
+        <li>
+          <a href="/movie/<%= item.movieTitle %>">
+            <div class="tb02_img"><img class="tb02_poster" src="<%= item.poster %>" alt="<%= item.title %>" /></div>
+            <div class="tb02_bg">
+              <div class="tb02_num"><%= (idx+1) %></div>
+              <div class="tb02_title"><%= item.movieTitle %></div>
+              <div class="tb02_sub"></div>
+              <div class="tb02_date"><%= item.date %></div>
+            </div>
+          </a>
         </li>
         <% }) %>
         <li></li>

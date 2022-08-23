@@ -11,6 +11,7 @@ body a {
 
 * {
   box-sizing: border-box;
+  word-break: keep-all;
 }
 
 #header {
@@ -256,7 +257,8 @@ body a {
   justify-content: center;
 }
 .movie_desc ul .desc_left {
-  flex-basis: 47%;
+  flex-basis: 30%;
+  margin-left: 8%;
 }
 .movie_desc ul .desc_left li {
   margin-bottom: 2%;
@@ -268,11 +270,23 @@ body a {
 .movie_desc ul .desc_left li p {
   font-size: 26px;
   font-weight: 500;
+  position: relative;
+  z-index: 2;
+}
+.movie_desc ul .desc_left li p:after {
+  content: "";
+  background-color: rgba(143, 124, 124, 0.2);
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  width: 30%;
+  transform: skew(20deg);
+  height: 10px;
 }
 .movie_desc ul .desc_left .desc_point {
   position: relative;
 }
-.movie_desc ul .desc_left .desc_point:after {
+.movie_desc ul .desc_left .desc_point::before {
   content: " (5점 만점 기준) ";
   position: absolute;
   color: #aaa;
@@ -285,13 +299,25 @@ body a {
   font-size: 40px;
   font-weight: 700;
 }
+.movie_desc ul .desc_middle {
+  flex-basis: 30%;
+}
+.movie_desc ul .desc_middle span {
+  line-height: 3;
+  color: #999;
+}
+.movie_desc ul .desc_middle .desc_desc {
+  line-height: 1.6;
+  font-weight: 700;
+}
 .movie_desc ul .desc_right {
   position: relative;
+  margin: 0 7%;
 }
 .movie_desc ul .desc_right > img {
   width: 350px;
   height: 430px;
-  filter: blur(3px);
+  filter: blur(5px);
   opacity: 0.3;
 }
 .movie_desc ul .desc_right li {
@@ -300,7 +326,8 @@ body a {
   left: 15%;
 }
 .movie_desc ul .desc_right li img {
-  width: 250px;
+  width: 300px;
+  transform: translate(-30%, -21%);
 }
 .movie_desc ul .desc_right li p {
   letter-spacing: 1.6px;
@@ -312,6 +339,52 @@ body a {
 
 .detail {
   background-color: #000;
+}
+
+.table02 .tb02_contents {
+  justify-content: space-between;
+  display: flex;
+  width: 1167px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.table02 .tb02_contents li {
+  margin-right: 5%;
+  margin-bottom: 6%;
+  position: relative;
+}
+.table02 .tb02_contents li:hover .tb02_bg {
+  display: block;
+}
+.table02 .tb02_contents li .tb02_img img {
+  width: 220px;
+}
+.table02 .tb02_contents li .tb02_bg {
+  transition: all 0.25s ease-in-out;
+  display: none;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 99%;
+  text-align: center;
+}
+.table02 .tb02_contents li .tb02_title {
+  color: #fff;
+  font-size: 33px;
+  font-weight: 700;
+  margin-top: 35%;
+}
+.table02 .tb02_contents li .tb02_num {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  transform: translate(-38%, 50%);
+}
+.table02 .tb02_contents li .tb02_date {
+  font-size: 15px;
+  color: #ccc;
+  margin-top: 6%;
 }
 
 @media all and (max-width: 1200px) {
